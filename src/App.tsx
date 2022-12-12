@@ -1,4 +1,5 @@
-import React from 'react';
+import ParticlesComponent from './components/ParticlesComponent';
+import Navbar from './components/Navbar';
 //IMPLEMENT TSPARTICLES
 
 // import TodoList from './components/TodoList';
@@ -11,10 +12,17 @@ function App() {
   //   console.log(text);
   // };
 
+  // return (
+  //   <div className="App">
+  //     {/* <NewTodo onAddTodo={todoAddHandler} />
+  //     <TodoList items={todos} /> */}
+  //   </div>
+  // );
+
   return (
-    <div className="App">
-      {/* <NewTodo onAddTodo={todoAddHandler} />
-      <TodoList items={todos} /> */}
+    <div className='App'>
+      <ParticlesComponent />
+      <Navbar />
     </div>
   );
 }
