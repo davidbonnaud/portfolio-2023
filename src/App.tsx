@@ -1,5 +1,5 @@
 import ParticlesComponent from './components/ParticlesComponent';
-import Navbar from './components/Navbar';
+import NavbarComponent from './components/NavbarComponent';
 //IMPLEMENT TSPARTICLES
 
 // import TodoList from './components/TodoList';
@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className='App'>
+      <NavbarComponent />
       <ParticlesComponent />
-      <Navbar />
     </div>
   );
 }
