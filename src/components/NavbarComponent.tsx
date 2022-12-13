@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
+import Home from './Home';
+import About from './About';
+import Portfolio from './Portfolio';
 
 const NavbarComponent = () => {
   const navItems = ['Home', 'About Me', 'Portfolio'];
-  const [home, setHome] = useState(true);
-  const [about, setAbout] = useState(true);
-  const [portfolio, setPortfolio] = useState(true);
+  const [components, setComponents] = useState(0);
 
   const navHandler = (item: string) => {
     switch (item) {
       case 'Home':
-        setAbout(false);
-        setPortfolio(false);
-        setHome(true);
+        setComponents(0);
         break;
 
       case 'About Me':
-        setPortfolio(false);
-        setHome(false);
-        setAbout(false);
+        setComponents(1);
         break;
 
       case 'Portfolio':
-        setHome(false);
-        setAbout(false);
-        setPortfolio(true);
+        setComponents(2);
         break;
 
     }
@@ -53,6 +48,9 @@ const NavbarComponent = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      { components === 0 ? <Home /> : null }
+      { components === 1 ? <About /> : null }
+      { components === 2 ? <Portfolio /> : null }
     </>
   )
 }
