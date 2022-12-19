@@ -7,7 +7,7 @@ const About = () => {
     <Box sx={{ display: 'flex', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
       <Fade in timeout={1000}>
         <h1>About</h1>
-      </Fade> 
+      </Fade>
       <div className='intro'>
         <Typewriter 
           onInit={(typewriter) => {
