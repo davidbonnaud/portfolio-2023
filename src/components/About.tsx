@@ -8,7 +8,7 @@ const About = () => {
       <Box className='intro' sx={{ textAlign: 'center' }}>
         <Fade in timeout={1000}>
           <h1>About</h1>
-        </Fade>
+        </Fade> 
       </Box>   
 
       <Box className='intro' sx={{ textAlign: 'center', maxWidth: '75%' }}>
