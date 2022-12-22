@@ -41,15 +41,20 @@ const NavbarComponent = () => {
       <Toolbar sx={{ backgroundColor: '#283344' }}/>
       <Divider />
       <List>
-        {['Home', 'About Me', 'Portfolio'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
+        {['Home', 'About Me', 'Portfolio'].map((item, index) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton onClick={() => {
+              navHandler(item);
+              handleDrawerToggle();
+              }}>
               <ListItemIcon>
-                {index === 0 ? <HomeIcon /> : null}
-                {index === 1 ? <PortraitIcon /> : null}
-                {index === 2 ? <WorkIcon /> : null}
+                {index === 0 ? <HomeIcon sx={{ color: '#fff' }} /> : null}
+                {index === 1 ? <PortraitIcon sx={{ color: '#fff' }} /> : null}
+                {index === 2 ? <WorkIcon sx={{ color: '#fff' }} /> : null}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <Typography fontFamily={'Ubuntu'}>
+                <ListItemText primary={item} />
+              </Typography>
             </ListItemButton>
           </ListItem>
         ))}
@@ -67,6 +72,7 @@ const NavbarComponent = () => {
         aria-label="navigation links"
       >
         <Drawer
+          anchor='right'
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -89,20 +95,20 @@ const NavbarComponent = () => {
       </Box>
       
       <AppBar style={{ background: 'transparent', boxShadow: 'none' }}>
-        <Toolbar>
+        <Toolbar>          
+          <Typography variant="h6" fontFamily={'Ubuntu'} noWrap component="div" sx={{ flexGrow: 1, ml: 2, display: { sm: 'none' } }}>
+            David Bonnaud
+          </Typography>
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            edge="end"
+            edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: '#fff' }} />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ mr: 2, display: { sm: 'none' } }}>
-            David Bonnaud
-          </Typography>
-        <Typography
+          <Typography
             variant="h6"
             fontFamily={'Ubuntu'}
             component="div"
