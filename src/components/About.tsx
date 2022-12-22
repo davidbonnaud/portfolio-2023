@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 const About = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-      <Box className='intro' sx={{ textAlign: 'center' }}>
+      <Box className='intro' sx={{ textAlign: 'center', mt: {xs: 4} }}>
         <Fade in timeout={1000}>
           <h1>About</h1>
         </Fade> 
