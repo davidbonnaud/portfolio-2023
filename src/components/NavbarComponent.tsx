@@ -65,7 +65,6 @@ const NavbarComponent = () => {
 
   return (
     <>
-
       <Box
         component="nav"
         sx={{ flexShrink: { sm: 0 }} }
