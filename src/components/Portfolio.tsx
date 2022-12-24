@@ -3,7 +3,7 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 import React from 'react';
 
 const Portfolio = () => {
-  const projects = ['FishHooked', 'Flixter', 'Nomster', 'Grammable', 'Budgety'];
+  const projects = ['FishHooked', 'Flixter', 'Nomster', 'Grammable', 'Budgety', 'Flashback'];
 
   return (
     <Box sx={{ maxWidth: '100%', maxHeight: '100%' }}>
@@ -14,6 +14,36 @@ const Portfolio = () => {
       </Box>
 
       <Grid2 container spacing={3} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
+        {projects.map((project) => {
+          return (
+            <Fade in timeout={1200}>
+              <Grid2 sx={{ zIndex: 1 }} xs={3} >
+                <Card sx={{ maxWidth: 400, maxHeight: 400 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="200"
+                      image={require('./portfolio-images/budgety.png')}
+                      alt={project}
+                    />
+                    <Divider sx={{ borderBottomWidth: 2, borderColor: 'light-gray' }} />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {project}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        Budgeting app built with JavaScript, HTML, and CSS. 
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid2>
+            </Fade>
+          )
+        })}
+      </Grid2>
+
+      {/* <Grid2 container spacing={3} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
       <Fade in timeout={1200}>
         <Grid2 sx={{ zIndex: 1 }} xs={3} >
           <Card sx={{ maxWidth: 400, maxHeight: 400 }}>
@@ -85,7 +115,7 @@ const Portfolio = () => {
             </Card>
           </Grid2>
         </Fade>
-      </Grid2>
+      </Grid2> */}
 
       
     </Box>
