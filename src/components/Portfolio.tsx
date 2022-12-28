@@ -3,7 +3,7 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 import React from 'react';
 
 const Portfolio = () => {
-  const projects = [['FishHooked', 'E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.'], ['Flashback', 'A React flashcard app.']];
+  const projects = [['FishHooked', 'E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.'], ['Flashback', 'A React flashcard app using states to manage card positions and flipping functionality.']];
 
   return (
     <Box sx={{ maxWidth: '100%', maxHeight: '100%' }}>
@@ -11,9 +11,9 @@ const Portfolio = () => {
         <Fade in timeout={1000}>
           <h1>Portfolio</h1>
         </Fade>
-      </Box>
+      </Box> 
 
-      <Grid2 container spacing={3} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
+      <Grid2 container spacing={5} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
         {projects.map((project) => {
           return (
             <Fade in timeout={1200}>
@@ -25,6 +25,7 @@ const Portfolio = () => {
                     height="200"
                     image={require('./portfolio-images/budgety.png')}
                     alt={project[0]}
+                    sx={{ objectFit: "contain" }}
                   />
                   <Divider sx={{ borderBottomWidth: 2, borderColor: 'light-gray' }} />
                   <CardContent>
