@@ -17,7 +17,7 @@ const Portfolio = () => {
         {projects.map((project) => {
           return (
             <Fade in timeout={1200}>
-              <Grid2 sx={{ zIndex: 1 }} xs={3} >
+              <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} md={3} lg={4} >
               <CardActionArea>
                 <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
                   <CardMedia
