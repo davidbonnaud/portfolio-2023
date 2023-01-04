@@ -17,26 +17,26 @@ const Portfolio = () => {
         {projects.map((project) => {
           return (
             <Fade in timeout={1200}>
-              <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} md={3} lg={4} >
-              <CardActionArea>
-                <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={require('./portfolio-images/budgety.png')}
-                    alt={project[0]}
-                    sx={{ objectFit: "contain" }}
-                  />
-                  <Divider sx={{ borderBottomWidth: 2, borderColor: 'light-gray' }} />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {project[0]}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {project[1]} 
-                    </Typography>
-                  </CardContent>
-                </Card>
+              <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={4} style={{ maxWidth: 600 }} >
+                <CardActionArea>
+                  <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
+                    <CardMedia
+                      component="img"
+                      height="200"
+                      image={require('./portfolio-images/budgety.png')}
+                      alt={project[0]}
+                      sx={{ objectFit: "contain" }}
+                    />
+                    <Divider sx={{ borderBottomWidth: 2, borderColor: 'light-gray' }} />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {project[0]}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {project[1]} 
+                      </Typography>
+                    </CardContent>
+                  </Card>
                 </CardActionArea>
               </Grid2>
             </Fade>

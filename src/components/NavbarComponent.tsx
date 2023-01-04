@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AppBar, Toolbar, Box, Button, Typography, Drawer, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import IconButton from '@mui/material/IconButton';
@@ -13,7 +13,27 @@ const NavbarComponent = () => {
   const navItems = ['Home', 'About Me', 'Portfolio'];
   const [components, setComponents] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileNavColor, setMobileNavColor] = useState('transparent');
   const drawerWidth = 240;
+  const threshold = 50; // number of pixels from the top at which the navbar should be elevated
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > threshold) {
+        // add a class to the navbar that elevates it
+        setMobileNavColor('#283344');
+      } else {
+        // remove the class that elevates the navbar
+        setMobileNavColor('transparent');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [threshold]);
 
   const navHandler = (item: string) => {
     switch (item) {
@@ -65,6 +85,7 @@ const NavbarComponent = () => {
 
   return (
     <>
+    {/* <ElevationScroll> */}
       <Box
         component="nav"
         sx={{ flexShrink: { sm: 0 }} }
@@ -93,7 +114,7 @@ const NavbarComponent = () => {
         </Drawer>
       </Box>
       
-      <AppBar style={{ background: 'transparent', boxShadow: 'none' }}>
+      <AppBar id='navbar' style={{ background: mobileNavColor, boxShadow: 'none' }}>
         <Toolbar>          
           <Typography variant="h6" fontFamily={'Ubuntu'} noWrap component="div" sx={{ flexGrow: 1, ml: 2, display: { sm: 'none' } }}>
             David Bonnaud
@@ -126,9 +147,11 @@ const NavbarComponent = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      
       { components === 0 ? <Home /> : null }
       { components === 1 ? <About /> : null }
       { components === 2 ? <Portfolio /> : null }
+      {/* </ElevationScroll> */}
     </>
   )
 }
