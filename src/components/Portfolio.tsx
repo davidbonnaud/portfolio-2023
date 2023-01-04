@@ -45,7 +45,7 @@ const Portfolio = () => {
     },
     palette: {
       primary: {
-        main: '#fff',
+        main: '#3b4c66',
         darker: '#fff',
       },
       neutral: {
@@ -71,9 +71,9 @@ const Portfolio = () => {
       </Box> 
 
       <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
-        {currentPageItems.map((project) => {
+        {currentPageItems.map((project, index) => {
           return (
-            <Fade in timeout={2000}>
+            <Fade in timeout={1000}>
               <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={3} style={{ maxWidth: 500 }} >
                 <CardActionArea>
                   <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
@@ -100,9 +100,11 @@ const Portfolio = () => {
           )
         })}
       </Grid2>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Pagination count={totalPages} page={currentPage} onChange={handleChange} color='primary' sx={{ zIndex: 1, position: 'relative' }} />
-      </Box>    
+      <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Pagination count={totalPages} page={currentPage} onChange={handleChange} color='primary' sx={{ zIndex: 1, position: 'relative', '& .MuiPaginationItem-root': {
+          color: '#fff',
+        } }} />
+      </Box>
     </Box>
     </ThemeProvider>
   )
