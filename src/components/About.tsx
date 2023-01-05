@@ -20,7 +20,7 @@ const About = () => {
             delay: 30
           }}
         />
-      </Box>        
+      </Box>
     </Box>
   )
 }
