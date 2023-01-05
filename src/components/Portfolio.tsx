@@ -63,15 +63,15 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider theme={theme}>
-    <Box sx={{ maxWidth: '100%', maxHeight: '100%' }}>
+    <Box sx={{ maxWidth: '100%', maxHeight: '100%', pt: 6 }}>
       <Box sx={{ display: 'flex', width: '100%', pt: 6, justifyContent: 'center', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <h1>Portfolio</h1>
         </Fade>
       </Box> 
 
-      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', }} style={{ margin: 0, width: '100%' }} >
-        {currentPageItems.map((project, index) => {
+      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', pt: 4 }} style={{ margin: 0, width: '100%' }} >
+        {currentPageItems.map((project) => {
           return (
             <Fade in timeout={1000}>
               <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={3} style={{ maxWidth: 500 }} >
@@ -100,7 +100,7 @@ const Portfolio = () => {
           )
         })}
       </Grid2>
-      <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 4, pb: 4 }}>
         <Pagination count={totalPages} page={currentPage} onChange={handleChange} color='primary' sx={{ zIndex: 1, position: 'relative', '& .MuiPaginationItem-root': {
           color: '#fff',
         } }} />

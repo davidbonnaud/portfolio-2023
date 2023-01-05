@@ -8,6 +8,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Link from '@mui/material/Link';
 
 const NavbarComponent = () => {
   const navItems = ['Home', 'About Me', 'Portfolio'];
@@ -59,6 +62,12 @@ const NavbarComponent = () => {
   const drawer = (
     <div>
       <Toolbar sx={{ backgroundColor: '#283344' }}/>
+      <Link href='https://www.linkedin.com/in/davidbonnaud/' underline='none' target="_blank" rel="noreferrer">
+        <LinkedInIcon sx={{ color: '#fff', fontSize: 40, position: 'absolute', top: 10, left: 70 }} />
+      </Link>
+      <Link href='https://github.com/davidbonnaud' underline='none' target="_blank" rel="noreferrer">
+        <GitHubIcon sx={{ color: '#fff', fontSize: 40, position: 'absolute', top: 10, right: 70 }} />
+      </Link>
       <Divider />
       <List>
         {['Home', 'About Me', 'Portfolio'].map((item, index) => (
@@ -144,6 +153,14 @@ const NavbarComponent = () => {
                 </Typography>
               </Button>
             ))}
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Link href='https://www.linkedin.com/in/davidbonnaud/' underline='none' target="_blank" rel="noreferrer">
+              <LinkedInIcon sx={{ color: '#fff', fontSize: 40, pl: 1 }} />
+            </Link>
+            <Link href='https://github.com/davidbonnaud' underline='none' target="_blank" rel="noreferrer">
+              <GitHubIcon sx={{ color: '#fff', fontSize: 40, pl: 2 }} />
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
