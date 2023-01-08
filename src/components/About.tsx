@@ -21,7 +21,7 @@ const About = () => {
           }}
         />
       </Box>
-    </Box>
+    </Box> 
   )
 }
 
