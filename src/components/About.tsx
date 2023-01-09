@@ -19,7 +19,7 @@ const About = () => {
           options={{
             delay: 30
           }}
-        />
+        /> 
       </Box>
     </Box> 
   )
