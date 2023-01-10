@@ -32,3 +32,20 @@ h1 {
 .MuiButtonBase-root {
   color: white;
 }
+
+.parallax-effect {
+  transform: perspective(1000px);
+  background-image: url('/src/components/portfolio-images/chess.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.inner-element {
+  transform: translateZ(40px) scale(0.8);
+  width: 70%;
+  margin-left: 25%;
+  z-index: 2;
+}
