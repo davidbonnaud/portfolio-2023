@@ -1,7 +1,7 @@
 import { Box, Fade } from '@mui/material';
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import planetSvg from './portfolio-images/planet.svg';
+import planetSvg from './portfolio-images/planet-clouds.svg';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Fade in timeout={1000}>
         <h1>Home</h1>        
       </Fade>
-      <Tilt className="parallax-effect" perspective={500}>
+      <Tilt className="parallax-effect" transitionSpeed={3000} tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={500}>
         <img className='inner-element' src={planetSvg} alt='budgetyimg' />
       </Tilt>
     </Box>
