@@ -34,7 +34,7 @@ declare module '@mui/material/styles' {
 }
 
 const Portfolio = () => {
-  const projects = [['FishHooked', 'An E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.', 'fishhooked.png'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.', 'flixter.jpg'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.', 'nomster.jpg'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.', 'grammable.png'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.', 'budgety.png'], ['Flashback', 'A React flashcard app using states to manage card positions and flipping functionality.', 'flashback.png']];
+  const projects = [['FishHooked', 'An E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.', 'fishhooked.png', 'https://github.com/davidbonnaud/em-shop'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.', 'flixter.jpg', 'https://github.com/davidbonnaud/flixter'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.', 'nomster.jpg', 'https://github.com/davidbonnaud/nomster'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.', 'grammable.png', 'https://github.com/davidbonnaud/grammable'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.', 'budgety.png', 'https://github.com/davidbonnaud/budgety'], ['Flashback', 'A React flashcard app using states to manage card positions and flipping functionality.', 'flashback.png', 'https://github.com/davidbonnaud/flashback']];
 
   const totalPages = Math.ceil(projects.length / 4);
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,19 +63,19 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider theme={theme}>
-    <Box sx={{ maxWidth: '100%', maxHeight: '100%', pt: 6 }}>
+    <Box sx={{ maxWidth: '100%', maxHeight: '100%', pt: {xs: 4, sm: 12} }}>
       <Box sx={{ display: 'flex', width: '100%', pt: 6, justifyContent: 'center', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <h1>Portfolio</h1>
         </Fade>
       </Box> 
 
-      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', pt: 4 }} style={{ margin: 0, width: '100%' }} >
+      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', pt: {xs: 4, sm: 12} }} style={{ margin: 0, width: '100%' }} >
         {currentPageItems.map((project) => {
           return (
             <Fade in timeout={1000}>
               <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={3} style={{ maxWidth: 500 }} >
-                <CardActionArea>
+                <CardActionArea href={project[3]} target={'_blank'}>
                   <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
                     <CardMedia
                       component="img"

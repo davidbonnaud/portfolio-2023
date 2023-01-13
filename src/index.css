@@ -32,6 +32,10 @@ h1 {
   padding-left: .3rem;
 }
 
+.about-heading {
+  margin-bottom: 3rem;
+}
+
 .intro {
   z-index: 1;
   color: white;

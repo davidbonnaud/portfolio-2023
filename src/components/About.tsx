@@ -7,7 +7,7 @@ const About = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
       <Box className='intro' sx={{ textAlign: 'center', mt: {xs: 25, sm: 0} }}>
         <Fade in timeout={1000}>
-          <h1>About</h1>
+          <h1 className='about-heading'>About</h1>
         </Fade> 
       </Box>   
 
