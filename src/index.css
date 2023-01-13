@@ -17,6 +17,19 @@ h1 {
   font-size: 4rem;
   z-index: 1;
   color: white;
+  margin: 0 auto;
+}
+
+.hero-text {
+  font-size: 5em;
+  filter: drop-shadow(0 0 0.25rem black);
+}
+
+.hero-subtext {
+  font-size: 2em;
+  filter: drop-shadow(0 0 0.25rem black);
+  color: #fff;
+  padding-left: .3rem;
 }
 
 .intro {
