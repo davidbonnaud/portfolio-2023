@@ -18,7 +18,7 @@ const Home = () => {
           </Fade>
           
           <Fade in timeout={2000}>
-            <h2 className='hero-subtext'>Web Developer</h2>
+            <h2 className='hero-subtext'>Software Engineer</h2>
           </Fade>
         </Grid2>
 

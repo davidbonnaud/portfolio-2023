@@ -32,10 +32,6 @@ h1 {
   padding-left: .3rem;
 }
 
-.about-heading {
-  margin-bottom: 3rem;
-}
-
 .intro {
   z-index: 1;
   color: white;
@@ -67,4 +63,30 @@ h1 {
   background-repeat: no-repeat;
   width: 100%;
   z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .typewriter {
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .about-heading {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .typewriter {
+    font-size: .65em;
+    color: white;
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .about-heading {
+    margin-bottom: 2rem;
+  }
 }

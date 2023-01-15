@@ -34,7 +34,7 @@ declare module '@mui/material/styles' {
 }
 
 const Portfolio = () => {
-  const projects = [['FishHooked', 'An E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.', 'fishhooked.png', 'https://github.com/davidbonnaud/em-shop'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.', 'flixter.jpg', 'https://github.com/davidbonnaud/flixter'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.', 'nomster.jpg', 'https://github.com/davidbonnaud/nomster'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.', 'grammable.png', 'https://github.com/davidbonnaud/grammable'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.', 'budgety.png', 'https://github.com/davidbonnaud/budgety'], ['Flashback', 'A React flashcard app using states to manage card positions and flipping functionality.', 'flashback.png', 'https://github.com/davidbonnaud/flashback']];
+  const projects = [['Current Portfolio Site', 'A portfolio website I designed and created using Typescript-React, Material UI, and tsparticles. Designed with mobile platforms in mind and responsive UI for most other platforms as well. Currently in development with additional functionalities planned.', 'portfolio-2023.png', 'https://github.com/davidbonnaud/portfolio-2023'], ['FishHooked', 'An E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.', 'fishhooked.png', 'https://github.com/davidbonnaud/em-shop'], ['Flixter', 'A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.', 'flixter.jpg', 'https://github.com/davidbonnaud/flixter'], ['Nomster', 'A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.', 'nomster.jpg', 'https://github.com/davidbonnaud/nomster'], ['Grammable', 'An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.', 'grammable.png', 'https://github.com/davidbonnaud/grammable'], ['2020 Portfolio Site', 'A portfolio site I made following a Udemy course, written in HTML/CSS and Vanilla JavaScript.', 'portfolio-2020.png', 'https://github.com/davidbonnaud/my-portfolio-site'], ['Budgety', 'A budgeting web application built using vanilla JavaScript, HTML, and CSS.', 'budgety.png', 'https://github.com/davidbonnaud/budgety'], ['Flashback', 'A React flashcard app using states to manage card positions and flipping functionality.', 'flashback.png', 'https://github.com/davidbonnaud/flashback']];
 
   const totalPages = Math.ceil(projects.length / 4);
   const [currentPage, setCurrentPage] = useState(1);
@@ -64,13 +64,13 @@ const Portfolio = () => {
   return (
     <ThemeProvider theme={theme}>
     <Box sx={{ maxWidth: '100%', maxHeight: '100%', pt: {xs: 4, sm: 12} }}>
-      <Box sx={{ display: 'flex', width: '100%', pt: 6, justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ display: 'flex', width: '100%', pt: 9, justifyContent: 'center', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <h1>Portfolio</h1>
         </Fade>
       </Box> 
 
-      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', pt: {xs: 4, sm: 12} }} style={{ margin: 0, width: '100%' }} >
+      <Grid2 container spacing={4} sx={{ justifyContent: 'center', alignItems: 'center', pt: {xs: 4, sm: 10} }} style={{ margin: 0, width: '100%' }} >
         {currentPageItems.map((project) => {
           return (
             <Fade in timeout={1000}>

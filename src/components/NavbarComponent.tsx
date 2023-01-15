@@ -11,6 +11,8 @@ import Portfolio from './Portfolio';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Link from '@mui/material/Link';
+import SendIcon from '@mui/icons-material/Send';
+import DownloadIcon from '@mui/icons-material/Download';
 
 const NavbarComponent = () => {
   const navItems = ['Home', 'About Me', 'Portfolio'];
@@ -87,6 +89,27 @@ const NavbarComponent = () => {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem key={'Resume'} disablePadding>
+          <ListItemButton href={require('./david-bonnaud-resume.pdf')} target={'_blank'} download>
+            <ListItemIcon>
+              <DownloadIcon sx={{ color: '#fff' }} />
+            </ListItemIcon>
+            <Typography fontFamily={'Ubuntu'}>
+              <ListItemText primary={'Resume'} />
+            </Typography>
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem key={'Resume'} disablePadding>
+          <ListItemButton onClick={() => window.location.href = 'mailto:dbonnaud123@gmail.com'}>
+            <ListItemIcon>
+              <SendIcon sx={{ color: '#fff' }} />
+            </ListItemIcon>
+            <Typography fontFamily={'Ubuntu'}>
+              <ListItemText primary={'Email Me'} />
+            </Typography>
+          </ListItemButton>
+        </ListItem>
       </List>
       
     </div>
