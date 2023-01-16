@@ -76,17 +76,43 @@ h1 {
   .about-heading {
     margin-bottom: 3rem;
   }
+
+  .hero-text {
+    font-size: 5em;
+    filter: drop-shadow(0 0 0.25rem black);
+  }
+  
+  .hero-subtext {
+    font-size: 2em;
+    filter: drop-shadow(0 0 0.25rem black);
+    color: #fff;
+    padding-left: .3rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .typewriter {
-    font-size: .65em;
+    font-size: .55em;
     color: white;
     z-index: 1;
     margin: 0 auto;
   }
 
   .about-heading {
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-text {
+    padding-top: 1em;
+    font-size: 3em;
+    filter: drop-shadow(0 0 0.25rem black);
+  }
+  
+  .hero-subtext {
+    font-size: 1.5em;
+    filter: drop-shadow(0 0 0.25rem black);
+    color: #fff;
+    padding-left: .3rem;
   }
 }

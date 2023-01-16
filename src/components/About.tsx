@@ -30,7 +30,7 @@ const About = () => {
 
       <Box className='contact-resume'>
         
-          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', mt: {xs: 5, sm: 10}, zIndex: 1 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', mt: {xs: 7, sm: 10}, zIndex: 1 }}>
             <Stack direction='row' spacing={2} sx={{ zIndex: 1 }}>
               <Fade in={showButton} timeout={1000}>
                 <Button variant="contained" href={require('./david-bonnaud-resume.pdf')} target={'_blank'} download sx={{ backgroundColor: '#3b4c66', '&:hover': {backgroundColor: '#51688a'} }} startIcon={<DownloadIcon />}>Resume</Button>

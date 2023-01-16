@@ -148,7 +148,7 @@ const NavbarComponent = () => {
       
       <AppBar id='navbar' style={{ background: mobileNavColor, boxShadow: 'none' }}>
         <Toolbar>          
-          <Typography variant="h6" fontFamily={'Ubuntu'} noWrap component="div" sx={{ flexGrow: 1, ml: 2, display: { sm: 'none' } }}>
+          <Typography variant="h6" fontFamily={'Ubuntu'} noWrap component="div" sx={{ flexGrow: 1, ml: 2, opacity: (components === 0 ? .5 : 1), display: { sm: 'none' } }}>
             David Bonnaud
           </Typography>
           <IconButton

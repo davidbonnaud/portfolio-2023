@@ -76,7 +76,7 @@ const Portfolio = () => {
             <Fade in timeout={1000}>
               <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={3} style={{ maxWidth: 500 }} >
                 <CardActionArea href={project[3]} target={'_blank'}>
-                  <Card sx={{ width: '100%', height: 350, justifyContent: 'center' }}>
+                  <Card sx={{ width: '100%', height: 350, justifyContent: 'center', backgroundColor: '#EFEFEF' }}>
                     <CardMedia
                       component="img"
                       height="200"
@@ -89,7 +89,7 @@ const Portfolio = () => {
                       <Typography gutterBottom variant="h5" component="div">
                         {project[0]}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" color="text.secondary" sx={{ fontSize: {xs: 12, md: 14} }}>
                         {project[1]} 
                       </Typography>
                     </CardContent>
