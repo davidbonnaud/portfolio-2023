@@ -3,7 +3,7 @@
 
 <img alt="homepage" src="portfolio-2023.png">
 
-Developed Using TypeScript-React and Tsparticles for the background animation.
+# Developed Using TypeScript-React and Tsparticles for the background animation. Hosted through CPanel.
 
 # Run on local machine:
 
