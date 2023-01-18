@@ -19,7 +19,7 @@ const About = () => {
       <Box className='intro' sx={{ textAlign: 'center', maxWidth: '75%', maxHeight: '65%' }}>
         <Typewriter 
           onInit={(typewriter) => {
-            typewriter.typeString("Hi, I'm David Bonnaud.<br/>").pauseFor(1000).typeString("I'm a developer currently based out of Cambridge, MA with a certification in full stack web development from Southern Methodist University.").pauseFor(1000).typeString(" I graduated from California State University, Fullerton with a Bachelor's of Science in Computer Science.").pauseFor(1000).typeString(" Some of the languages and frameworks I have experience with are JavaScript, Python, Django, React, TypeScript, C#, and Ruby on Rails.").start().callFunction(() => setShowButton(true));
+            typewriter.typeString("Hi, I'm David Bonnaud.<br/>").pauseFor(1000).typeString("I'm a developer currently based out of Cambridge, MA with a Bachelor's of Science in Computer Science from California State University, Fullerton.").pauseFor(1000).typeString(" I also have a certification in full stack web development from Southern Methodist University.").pauseFor(1000).typeString(" Some of the languages and frameworks I have experience with are JavaScript, Python, Django, React, TypeScript, C#, and Ruby on Rails.").start().callFunction(() => setShowButton(true));
           }}
           options={{
             delay: 30,

@@ -160,14 +160,20 @@ const NavbarComponent = () => {
           >
             <MenuIcon sx={{ color: '#fff' }} />
           </IconButton>
-          <Typography
-            variant="h6"
-            fontFamily={'Ubuntu'}
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            David Bonnaud
-          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', md: 'flex' }, flexDirection: 'row' }}>
+            <Typography
+              variant="h6"
+              fontFamily={'Ubuntu'}
+              component="div"
+              sx={{ mt: {sm: 1, md: 0}}}
+            >
+              David Bonnaud
+            </Typography>
+            <Typography variant="h6" fontFamily={'Ubuntu'} component="div" sx={{ opacity: .5, ml: { sm: 0, md: 2 } }}>
+              <Button onClick={() => window.location.href = 'mailto:dbonnaud123@gmail.com'} variant="text" sx={{ color: "#fff", pl: { sm: 0, md: 1 }}}>dbonnaud123@gmail.com</Button>
+            </Typography>
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }} onClick={() => navHandler(item)}>

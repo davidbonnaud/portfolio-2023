@@ -100,7 +100,7 @@ const Portfolio = () => {
           )
         })}
       </Grid2>
-      <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 4, pb: 4 }}>
+      <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: {xs: 2, sm: 4}, pb: 6 }}>
         <Pagination count={totalPages} page={currentPage} onChange={handleChange} color='primary' sx={{ zIndex: 1, position: 'relative', '& .MuiPaginationItem-root': {
           color: '#fff',
         } }} />
