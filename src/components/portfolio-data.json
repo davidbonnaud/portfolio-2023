@@ -1,0 +1,50 @@
+{
+    {
+        "name": "Current Portfolio Site", 
+        "desc": "A portfolio website I designed and created using Typescript-React, Material UI, and tsparticles. Designed with mobile platforms in mind and responsive UI for most other platforms as well. Currently in development with additional functionalities planned.",
+        "img": "portfolio-2023.png", 
+        "url": "https://github.com/davidbonnaud/portfolio-2023"
+    },
+    {
+        "name": "FishHooked", 
+        "desc": "An E-commerce platform built using Next.js and Sanity as a headless CMS. Handles transactions with Stripe API.", 
+        "img": "fishhooked.png", 
+        "url": "https://github.com/davidbonnaud/em-shop"
+    },
+    {
+        "name": "Flixter", 
+        "desc": "A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.", 
+        "img": "flixter.jpg", 
+        "url": "https://github.com/davidbonnaud/flixter"
+    },
+    {
+        "name": "Nomster", 
+        "desc": "A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.", 
+        "img": "nomster.jpg", 
+        "url": "https://github.com/davidbonnaud/nomster"
+    },
+    {
+        "name": "Grammable", 
+        "desc": "An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.", 
+        "img": "grammable.png", 
+        "url": "https://github.com/davidbonnaud/grammable"
+    },
+    {
+        "name": "2020 Portfolio Site", 
+        "desc": "A portfolio site I made following a Udemy course, written in HTML/CSS and Vanilla JavaScript.", 
+        "img": "portfolio-2020.png", 
+        "url": "https://github.com/davidbonnaud/my-portfolio-site"
+    },
+    {
+        "name": "Budgety", 
+        "desc": "A budgeting web application built using vanilla JavaScript, HTML, and CSS.", 
+        "img": "budgety.png", 
+        "url": "https://github.com/davidbonnaud/budgety"
+    },
+    {
+        "name": "Flashback", 
+        "desc": "A React flashcard app using states to manage card positions and flipping functionality.", 
+        "img": "flashback.png", 
+        "url": "https://github.com/davidbonnaud/flashback"
+    }
+}
