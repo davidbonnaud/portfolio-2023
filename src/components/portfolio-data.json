@@ -1,4 +1,4 @@
-{
+[
     {
         "name": "Current Portfolio Site", 
         "desc": "A portfolio website I designed and created using Typescript-React, Material UI, and tsparticles. Designed with mobile platforms in mind and responsive UI for most other platforms as well. Currently in development with additional functionalities planned.",
@@ -47,4 +47,4 @@
         "img": "flashback.png", 
         "url": "https://github.com/davidbonnaud/flashback"
     }
-}
+]
