@@ -27,7 +27,7 @@ const About = () => {
           }}
         /> 
       </Box>
- 
+
       <Box className='contact-resume'>
         
           <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', mt: {xs: 7, sm: 10}, zIndex: 1 }}>

@@ -1,4 +1,5 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Divider, Fade, Pagination, Typography } from '@mui/material';
+// import Skeleton from '@mui/material/Skeleton';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -39,6 +40,7 @@ const Portfolio = () => {
 
   const totalPages = Math.ceil(projects.length / 4);
   const [currentPage, setCurrentPage] = useState(1);
+  // const [loading, setLoading] = useState(true);
 
   const theme = createTheme({
     status: {
@@ -58,6 +60,7 @@ const Portfolio = () => {
 
   const handleChange = (event: any, value: number) => {
     setCurrentPage(value);
+    // setLoading(true);
   }
 
   const currentPageItems = projects.slice((currentPage - 1) * 4, currentPage * 4);
@@ -78,6 +81,7 @@ const Portfolio = () => {
               <Grid2 sx={{ zIndex: 1 }} xs={12} sm={6} lg={3} style={{ maxWidth: 500 }} >
                 <CardActionArea href={project.url} target={'_blank'}>
                   <Card sx={{ width: '100%', height: 350, justifyContent: 'center', backgroundColor: '#EFEFEF' }}>
+                    {/* {loading ? (<Skeleton variant="rectangular" width="100%" height={350} />) : ( */}
                     <CardMedia
                       component="img"
                       height="200"
@@ -100,6 +104,7 @@ const Portfolio = () => {
             </Fade>
           )
         })}
+        {/* setLoading(false); */}
       </Grid2>
       <Box sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: {xs: 2, sm: 4}, pb: 6 }}>
         <Pagination count={totalPages} page={currentPage} onChange={handleChange} color='primary' sx={{ zIndex: 1, position: 'relative', '& .MuiPaginationItem-root': {
