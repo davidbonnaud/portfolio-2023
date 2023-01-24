@@ -13,6 +13,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Link from '@mui/material/Link';
 import SendIcon from '@mui/icons-material/Send';
 import DownloadIcon from '@mui/icons-material/Download';
+import Footer from './Footer';
 
 const NavbarComponent = () => {
   const navItems = ['Home', 'About Me', 'Portfolio'];
@@ -70,6 +71,7 @@ const NavbarComponent = () => {
       <Link href='https://github.com/davidbonnaud' underline='none' target="_blank" rel="noreferrer">
         <GitHubIcon sx={{ color: '#fff', fontSize: 40, position: 'absolute', top: 10, right: 70 }} />
       </Link>
+      <Button onClick={() => window.location.href = 'mailto:dbonnaud123@gmail.com'} variant="text" sx={{ color: "#fff", opacity: .5, pl: 2 }}>dbonnaud123@gmail.com</Button>
       <Divider />
       <List>
         {['Home', 'About Me', 'Portfolio'].map((item, index) => (
@@ -111,13 +113,16 @@ const NavbarComponent = () => {
           </ListItemButton>
         </ListItem>
       </List>
+
+      <Box sx={{ width: '100%', height: '5%', textAlign: 'center', opacity: .5, bottom: 0, position: 'absolute', zIndex: 1, color: '#fff', pb:3 }}>
+        <p>© Copyright David Bonnaud 2023</p>
+      </Box>
       
     </div>
   );
 
   return (
     <>
-    {/* <ElevationScroll> */}
       <Box
         component="nav"
         sx={{ flexShrink: { sm: 0 }} }
@@ -197,7 +202,8 @@ const NavbarComponent = () => {
       { components === 0 ? <Home /> : null }
       { components === 1 ? <About /> : null }
       { components === 2 ? <Portfolio /> : null }
-      {/* </ElevationScroll> */}
+
+      <Footer />
     </>
   )
 }
