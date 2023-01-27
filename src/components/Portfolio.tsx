@@ -94,7 +94,7 @@ const Portfolio = () => {
                       <Typography gutterBottom variant="h5" component="div">
                         {project.name}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary" sx={{ fontSize: {xs: 12, md: 14, lg: 11, xl: 14} }}>
+                      <Typography variant="body2" color="text.secondary" sx={{ fontSize: {xs: 12, md: 14, lg: 11, xl: 13} }}>
                         {project.desc} 
                       </Typography>
                     </CardContent>
