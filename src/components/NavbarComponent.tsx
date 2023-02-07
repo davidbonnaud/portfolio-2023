@@ -22,7 +22,7 @@ const NavbarComponent = () => {
   const [mobileNavColor, setMobileNavColor] = useState('transparent');
   const drawerWidth = 240;
   const threshold = 50; // number of pixels from the top at which the navbar should be elevated
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
