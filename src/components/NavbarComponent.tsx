@@ -7,6 +7,7 @@ import PortraitIcon from '@mui/icons-material/Portrait';
 import WorkIcon from '@mui/icons-material/Work';
 import Home from './Home';
 import About from './About';
+import Resume from './Resume';
 import Portfolio from './Portfolio';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -16,7 +17,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import Footer from './Footer';
 
 const NavbarComponent = () => {
-  const navItems = ['Home', 'About Me', 'Portfolio'];
+  const navItems = ['Home', 'About Me', 'Resume', 'Portfolio'];
   const [components, setComponents] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileNavColor, setMobileNavColor] = useState('transparent');
@@ -51,8 +52,12 @@ const NavbarComponent = () => {
         setComponents(1);
         break;
 
-      case 'Portfolio':
+      case 'Resume':
         setComponents(2);
+        break;
+
+      case 'Portfolio':
+        setComponents(3);
         break;
 
     }
@@ -201,7 +206,8 @@ const NavbarComponent = () => {
       
       { components === 0 ? <Home /> : null }
       { components === 1 ? <About /> : null }
-      { components === 2 ? <Portfolio /> : null }
+      { components === 2 ? <Resume /> : null }
+      { components === 3 ? <Portfolio /> : null }
 
       <Footer />
     </>
