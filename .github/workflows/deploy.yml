@@ -53,9 +53,9 @@ jobs:
         host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-          cd /home/kiudw9mghth0/repositories/my-node-app
+          # $USER automatically resolves to your cPanel / FTP username
+          cd /home/$USER/repositories/my-node-app
           
           # Install production dependencies inside the new release folder natively
           cd releases/${{ steps.vars.outputs.RELEASE_VERSION }}
