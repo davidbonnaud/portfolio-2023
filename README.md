@@ -1,9 +1,9 @@
-# 2023 Portfolio Site
+# Current Portfolio Site
 ## See it here https://www.davidbonnaud.com/
 
 <img alt="homepage" src="portfolio-2023.png">
 
-### Developed Using TypeScript-React and Tsparticles for the background animation. Hosted through CPanel.
+### Developed Using TypeScript-React and Tsparticles for the background animation. Hosted through CPanel with CI/CD via GitHub Actions.
 
 ## Run on local machine:
 
