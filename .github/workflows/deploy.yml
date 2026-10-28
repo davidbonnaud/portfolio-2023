@@ -1,4 +1,4 @@
-name: Zero-Downtime Deploy TypeScript App
+name: Deploy React TypeScript App to GoDaddy
 
 on:
   push:
@@ -19,51 +19,30 @@ jobs:
         node-version: '20'
         cache: 'npm'
 
-    - name: Install Dependencies & Build
+    - name: Install Dependencies & Build React App
       run: |
         npm ci
         npm run build
 
-    - name: Organize Deployment Files
+    # Fixes GoDaddy 404 errors on page refresh for React Router
+    - name: Create .htaccess for Routing
       run: |
-        mkdir deploy
-        cp -r dist/* deploy/
-        cp package.json deploy/
-        cp package-lock.json deploy/
+        cat << 'EOF' > build/.htaccess
+        Options -MultiViews
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]
+        EOF
 
-    # Generate a unique timestamp for this specific release
-    - name: Set Release Version
-      id: vars
-      run: echo "RELEASE_VERSION=$(date +%Y%m%d%H%M%S)" >> $GITHUB_OUTPUT
-
-    # Uploads to an isolated folder: /repositories/my-node-app/releases/20261027231800
-    - name: Deploy Release to GoDaddy via FTP
+    # Syncs your built files straight to your main website folder
+    - name: Deploy Build Folder to GoDaddy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./deploy/
-        server-dir: ./repositories/my-node-app/releases/${{ steps.vars.outputs.RELEASE_VERSION }}/
-
-    # IF AND ONLY IF THE UPLOAD SUCCEEDS: Update the symlink instantly via SSH Key
-    - name: Switch Live Symlink (Atomic Switch)
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-          # $USER automatically resolves to your cPanel / FTP username
-          cd /home/$USER/repositories/my-node-app
-          
-          # Install production dependencies inside the new release folder natively
-          cd releases/${{ steps.vars.outputs.RELEASE_VERSION }}
-          npm install --production
-          cd ../..
-          
-          # Point the 'current' symlink to the brand new release directory
-          ln -sfn releases/${{ steps.vars.outputs.RELEASE_VERSION }} current
-          
-          # Clean up old releases so your disk doesn't fill up (keeps last 5)
-          cd releases && ls -t | tail -n +6 | xargs rm -rf
+        local-dir: ./build/
+        server-dir: ./public_html/
